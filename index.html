@@ -3,12 +3,20 @@
 <head>
     <meta charset="utf-8">
     <title>随机 Nitrome 游戏摇号机</title>
-    <style>/*#a47719 #f9ecc3*/</style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>今天我想玩</h1>
-    <button onclick="roll()">抽取游戏</button>
-    <div id="result"></div>
+    <div class="head">
+        <h1>今天我想玩</h1>
+    </div>
+    <div class="option">
+        <button onclick="roll()">抽取游戏</button>
+    </div>
+    <hr>
+    <div class="result">
+        <p id="out"></p>
+    </div>
+    </div>
 </body>
 </html>
 <script src="games.js"></script>

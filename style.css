@@ -1,0 +1,35 @@
+@font-face {
+/* font-test*/
+font-family: FFF-Neostandard;
+src:url('FFF-Neostandard.ttf');
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    background: #f9ecc3;
+}
+
+.head {
+    background: #a47719;
+    padding: 20px 0;
+}
+
+.head h1 {
+    margin: 0;
+}
+
+.option {
+    margin: 20px 0;
+}
+
+.result {
+    margin: 20px 0;
+    font-size: 300%;
+    font-family: FFF-Neostandard;
+}
+
+hr {/*
+    border: #a47719;
+    height: 2px;*/
+}

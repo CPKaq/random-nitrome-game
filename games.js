@@ -126,7 +126,7 @@ function getRandom(num)
     return Math.floor(Math.random()*num);
 }
 
-var output = document.getElementById("result");
+var output = document.getElementById("out");
 
 function roll()
 {
