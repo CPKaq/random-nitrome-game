@@ -131,10 +131,29 @@ function getRandom(num)
     return Math.floor(Math.random()*num);
 }
 
+function isExist(num, arr)
+{
+    var len = arr.length;
+    for(var i=0; i<len; i++)
+    {
+        if(arr[i]==num) return true;
+    }
+    return false;
+}
+
 function roll()
 {
-    gameNum = gameList.push(getRandom(flashGames.length)) -1;
-    //output.innerHTML = flashGames[getRandom(flashGames.length)];
+    if(gameNum >= flashGames.length-1)
+    {
+        window.alert("这么多游戏你玩得完吗?!");
+        return;
+    }
+    var rand = new Number;
+    do {
+        rand = getRandom(flashGames.length);
+    } while(isExist(rand, gameList));
+    gameNum = gameList.push(rand) -1;
+
     var para = document.createElement("p");
     var node = document.createTextNode(flashGames[gameList[gameNum]]);
     para.appendChild(node);
