@@ -29,6 +29,10 @@ body {
     font-family: FFF-Neostandard;
 }
 
+.result p {
+    margin: 10px 0;
+}
+
 hr {/*
     border: #a47719;
     height: 2px;*/
