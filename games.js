@@ -121,14 +121,22 @@ var flashGames = new Array(
     "Fluffball"
 );
 
+var gameList = new Array();
+var gameNum = new Number(0);
+
+var output = document.getElementById("out");
+
 function getRandom(num)
 {
     return Math.floor(Math.random()*num);
 }
 
-var output = document.getElementById("out");
-
 function roll()
 {
-    output.innerHTML = flashGames[getRandom(flashGames.length)];
+    gameNum = gameList.push(getRandom(flashGames.length)) -1;
+    //output.innerHTML = flashGames[getRandom(flashGames.length)];
+    var para = document.createElement("p");
+    var node = document.createTextNode(flashGames[gameList[gameNum]]);
+    para.appendChild(node);
+    output.appendChild(para);
 }
