@@ -125,6 +125,9 @@ var gameList = new Array();
 var gameNum = new Number(0);
 
 var output = document.getElementById("out");
+var clrBtn = document.getElementById("clrBtn");
+
+clrBtn.style.display="none";
 
 function getRandom(num)
 {
@@ -158,4 +161,14 @@ function roll()
     var node = document.createTextNode(flashGames[gameList[gameNum]]);
     para.appendChild(node);
     output.appendChild(para);
+
+    clrBtn.style.display="inherit";
+}
+
+function clr()
+{
+    gameList = [];
+    gameNum = 0;
+    output.innerHTML = "";
+    clrBtn.style.display="none";
 }

@@ -20,11 +20,12 @@ body {
 }
 
 .option {
-    margin: 20px 0;
+    padding: 20px 0;
+    border-bottom: #967227 solid 1px;
 }
 
 .result {
-    margin: 20px 0;
+    margin: 20px 0 85px 0;
     font-size: 300%;
     font-family: FFF-Neostandard;
 }
@@ -33,7 +34,11 @@ body {
     margin: 10px 0;
 }
 
-hr {/*
-    border: #a47719;
-    height: 2px;*/
+.clear {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: #f9ecc3;
+    border-top: #967227 solid 1px;
 }
