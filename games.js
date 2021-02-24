@@ -126,6 +126,7 @@ var gameNum = new Number(0);
 
 var output = document.getElementById("out");
 var clrBtn = document.getElementById("clrBtn");
+var floatOpt = document.getElementById("floatOpt");
 
 clrBtn.style.display="none";
 
@@ -162,7 +163,8 @@ function roll()
     para.appendChild(node);
     output.appendChild(para);
 
-    clrBtn.style.display="inherit";
+    clrBtn.style.display = "inherit";
+    window.scrollBy(0,document.documentElement.clientHeight);
 }
 
 function clr()
@@ -171,4 +173,10 @@ function clr()
     gameNum = 0;
     output.innerHTML = "";
     clrBtn.style.display="none";
+}
+
+window.onscroll = function() {
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  if(scrollTop > 80)    floatOpt.style.display = "inherit";
+  else floatOpt.style.display = "none";
 }

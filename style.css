@@ -24,6 +24,14 @@ body {
     border-bottom: #967227 solid 1px;
 }
 
+.float {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #f9ecc3;
+    display: none;
+}
+
 .result {
     margin: 20px 0 85px 0;
     font-size: 300%;
