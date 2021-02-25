@@ -24,6 +24,16 @@ body {
     border-bottom: #967227 solid 1px;
 }
 
+/*.gameOpt {
+    padding: 20px 0;
+}
+*/
+.gameOpt span {
+    display: inline-block;
+    width: 20%;
+    margin: 0 10px;
+}
+
 .float {
     position: fixed;
     top: 0;

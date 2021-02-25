@@ -127,8 +127,11 @@ var gameNum = new Number(0);
 var output = document.getElementById("out");
 var clrBtn = document.getElementById("clrBtn");
 var floatOpt = document.getElementById("floatOpt");
+var gameOpt = document.getElementById("gameOpt");
 
-clrBtn.style.display="none";
+clrBtn.style.display = "none";
+gameOpt.style.display = "none";
+gameLoad();
 
 function getRandom(num)
 {
@@ -173,6 +176,40 @@ function clr()
     gameNum = 0;
     output.innerHTML = "";
     clrBtn.style.display="none";
+}
+
+function gameLoad()
+{
+    gameOpt.innerHTML = "";
+    var paraList = new Array();
+    var paraNode = new Array();
+    for(var i=0; i<flashGames.length; i++)
+    {
+        paraList.push(document.createElement("span"));
+        paraNode.push(document.createTextNode((i+1).toString() + ". " + flashGames[i]));
+        paraList[i].appendChild(paraNode[i]);
+        gameOpt.appendChild(paraList[i]);
+    }
+}
+
+function gameShow(b)
+{
+    if(gameOpt.style.display=="none")
+    {
+        gameOpt.style.display = "inherit";
+        return true;
+    } else {
+        gameOpt.style.display = "none";
+        return false;
+    }
+}
+
+function gameDel(index)
+{
+    if(!(index>0 && index<=flashGames.length)) return false;
+    flashGames.splice(index-1, 1);
+    gameLoad();
+    return true;
 }
 
 window.onscroll = function() {
