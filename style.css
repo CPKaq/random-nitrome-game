@@ -10,6 +10,11 @@ body {
     background: #f9ecc3;
 }
 
+a {
+    text-decoration: none;
+    color: #a47719;;
+}
+
 .head {
     background: #a47719;
     padding: 20px 0;
@@ -27,7 +32,6 @@ body {
 .float-left {
     float: left; 
     width: 100px;
-    color: #a47719;
     font-size: small;
     visibility: hidden;
 }
@@ -35,17 +39,16 @@ body {
 .float-right {
     float: right; 
     width: 100px;
-    color: #a47719;
     font-size: small;
 }
 
-.gameOpt span {
+.gameOpt a {
     display: inline-block;
     width: 20%;
     margin: 5px 10px;
 }
 
-.gameOpt span:hover {
+.gameOpt a:hover {
     color: #999;
     text-decoration: line-through;
 }

@@ -128,6 +128,7 @@ var output = document.getElementById("out");
 var clrBtn = document.getElementById("clrBtn");
 var floatOpt = document.getElementById("floatOpt");
 var gameOpt = document.getElementById("gameOpt");
+var listLink = document.getElementById("gameListLink");
 
 clrBtn.style.display = "none";
 gameOpt.style.display = "none";
@@ -182,13 +183,11 @@ function gameLoad()
 {
     gameOpt.innerHTML = "";
     var paraList = new Array();
-    var paraNode = new Array();
     for(var i=0; i<flashGames.length; i++)
     {
-        paraList.push(document.createElement("span"));
-        paraList[i].setAttribute("onclick", "gameDel("+i+")");
-        paraNode.push(document.createTextNode(flashGames[i]));
-        paraList[i].appendChild(paraNode[i]);
+        paraList.push(document.createElement("a"));
+        paraList[i].setAttribute("href", "javascript: gameDel("+i+");");
+        paraList[i].innerHTML = flashGames[i];
         gameOpt.appendChild(paraList[i]);
     }
 }
@@ -198,9 +197,11 @@ function gameShow(b)
     if(gameOpt.style.display=="none")
     {
         gameOpt.style.display = "inherit";
+        listLink.innerHTML = "▲游戏列表";
         return true;
     } else {
         gameOpt.style.display = "none";
+        listLink.innerHTML = "▼游戏列表";
         return false;
     }
 }
