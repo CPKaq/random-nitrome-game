@@ -186,7 +186,8 @@ function gameLoad()
     for(var i=0; i<flashGames.length; i++)
     {
         paraList.push(document.createElement("span"));
-        paraNode.push(document.createTextNode((i+1).toString() + ". " + flashGames[i]));
+        paraList[i].setAttribute("onclick", "gameDel("+i+")");
+        paraNode.push(document.createTextNode(flashGames[i]));
         paraList[i].appendChild(paraNode[i]);
         gameOpt.appendChild(paraList[i]);
     }
@@ -206,8 +207,8 @@ function gameShow(b)
 
 function gameDel(index)
 {
-    if(!(index>0 && index<=flashGames.length)) return false;
-    flashGames.splice(index-1, 1);
+    if(!(index>-1 && index<flashGames.length)) return false;
+    flashGames.splice(index, 1);
     gameLoad();
     return true;
 }

@@ -24,14 +24,30 @@ body {
     border-bottom: #967227 solid 1px;
 }
 
-/*.gameOpt {
-    padding: 20px 0;
+.float-left {
+    float: left; 
+    width: 100px;
+    color: #a47719;
+    font-size: small;
+    visibility: hidden;
 }
-*/
+
+.float-right {
+    float: right; 
+    width: 100px;
+    color: #a47719;
+    font-size: small;
+}
+
 .gameOpt span {
     display: inline-block;
     width: 20%;
-    margin: 0 10px;
+    margin: 5px 10px;
+}
+
+.gameOpt span:hover {
+    color: #999;
+    text-decoration: line-through;
 }
 
 .float {
